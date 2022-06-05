@@ -26,11 +26,11 @@ int binarySearch(int arr[], int number, int a, int b) {
     return 0;
 }
 
-int countPairs1(int* arr, int val, int len) {
+int countPairs1(int* arr, int value, int len) {
     int c = 0;
     for (int i = 0; i < len - 1; i++) {
         for (int k = i + 1; k < len; k++) {
-            if (*(arr + i) + *(arr + k) == val) {
+            if (*(arr + i) + *(arr + k) == value) {
                 c++;
             }
         }
@@ -38,7 +38,7 @@ int countPairs1(int* arr, int val, int len) {
     return c;
 }
 
-int countPairs2(int* arr, int val, int len) {
+int countPairs2(int* arr, int value, int len) {
     int c = 0;
     int i = 0;
     int d = 0;
@@ -47,8 +47,8 @@ int countPairs2(int* arr, int val, int len) {
         d = 1;
         while (d < len - 1) {
             f = *(arr + i) + *(arr + i + d);
-            if (f > val) break;
-            if (f == val) c++;
+            if (f > value) break;
+            if (f == value) c++;
             d++;
         }
         i++;
@@ -56,13 +56,13 @@ int countPairs2(int* arr, int val, int len) {
     return c;
 }
 
-int countPairs3(int* arr, int val, int len) {
+int countPairs3(int* arr, int value, int len) {
     int i = 0;
     int c = 0;
     int s, s2;
     while (i < len) {
-        if (*(arr + i) + *(arr + i + 1) > val) return c;
-        s = binarySearch(arr + i + 1, 0, len - i - 2, val - *(arr+i));
+        if (*(arr + i) + *(arr + i + 1) > value) return c;
+        s = binarySearch(arr + i + 1, 0, len - i - 2, value - *(arr+i));
         c += s;
         i++;
     }
