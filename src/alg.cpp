@@ -2,7 +2,7 @@
 int binarySearch(int arr[], int a, int b, int number) {
     if (a <= b) {
         int ser = (a + b) / 2;
-        if (arr[mid] == number) {
+        if (arr[ser] == number) {
             int i = 1;
             int c = 1;
             while (arr[ser - i] == number && ser - i >= 0)
@@ -46,7 +46,7 @@ int countPairs2(int* arr, int val, int len) {
     while (i < len) {
         d = 1;
         while (d < len - 1) {
-            s = *(arr + i) + *(arr + i + d);
+            f = *(arr + i) + *(arr + i + d);
             if (f > val) break;
             if (f == val) c++;
             d++;
