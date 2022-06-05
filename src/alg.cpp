@@ -5,16 +5,9 @@ int binarySearch(int arr[], int number, int a, int b) {
         if (arr[ser] == number) {
             int i = 1;
             int c = 1;
-            while (arr[ser - i] == number && ser - i >= 0)
-            { 
-              i++; 
-              c++; 
-            }
+            while (arr[ser - i] == number && ser - i >= 0) { i++; c++; }
             i = 1;
-            while (arr[ser + i] == number) { 
-              i++;
-              c++;
-            }
+            while (arr[ser + i] == number) { i++; c++; }
             return c;
         }
         if (arr[ser] < number)
