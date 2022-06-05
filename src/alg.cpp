@@ -1,5 +1,5 @@
 // Copyright 2021 NNTU-CS
-int binarySearch(int arr[], int number, int a, int b) {
+int binarySearch(int arr[], int a, int b, int number) {
     if (a <= b) {
         int ser = (a + b) / 2;
         if (arr[ser] == number) {
