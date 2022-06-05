@@ -14,7 +14,6 @@ int binarySearch(int arr[], int number, int a, int b) {
             return binarySearch(arr, ser + 1, b, number);
         if (arr[ser] > number)
             return binarySearch(arr, a, ser - 1, number);
-        
     }
     return 0;
 }
